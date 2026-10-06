@@ -92,7 +92,7 @@ function wordmark() { echo '<span class="wordmark wordmark-original"><img src="a
 <section class="about-elaan" id="about" aria-labelledby="about-title">
  <div class="container">
   <div class="about-intro about-reveal">
-   <div class="about-title"><span class="eyebrow">GET TO KNOW HOUSE OF ELAAN</span><h2 id="about-title">Many strengths.<br><span>One extraordinary<br>vision.</span></h2><div class="about-signature"><span aria-hidden="true">•</span><p>Local expertise.<br><strong>Global best practices.</strong></p></div></div>
+   <div class="about-title"><span class="eyebrow">GET TO KNOW HOUSE OF ELAAN</span><h2 id="about-title">Many strengths.<br><span>One extraordinary<br>vision.</span></h2><div class="about-signature"><span aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></span><p>Local expertise.<br><strong>Global best practices.</strong></p></div></div>
    <div class="about-description"><span class="about-overline">A DIVERSIFIED GROUP. A SHARED PURPOSE.</span><p>House of Elaan is a diversified conglomerate that specializes in multiple sectors including <strong>construction, sales and marketing, IT, and architecture.</strong></p><p>We are committed to providing financial and legal services that meet international standards. Our unique ability to integrate local expertise with global best practices makes us a <strong>one-stop solution for our clients.</strong></p></div>
   </div>
   <div class="about-purpose-grid">
