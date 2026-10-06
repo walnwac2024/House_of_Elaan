@@ -5,7 +5,7 @@ $seoTitle = 'House of Elaan | Real Estate, Technology & Consultancy Islamabad';
 $seoDescription = 'Explore House of Elaan in Islamabad: nine businesses in real estate, consultancy, technology, creative services, research, investment and hospitality.';
 $schemaGraph = array(
  array('@type'=>'Organization','@id'=>$siteUrl.'#organization','name'=>'House of Elaan','url'=>$siteUrl,
-  'logo'=>$siteUrl.'assets/hoe-logo-web.svg','telephone'=>'+923111222679','description'=>$seoDescription,
+  'logo'=>$siteUrl.'assets/logos/hoe-logo-web.svg','telephone'=>'+923111222679','description'=>$seoDescription,
   'address'=>array('@type'=>'PostalAddress','addressLocality'=>'Islamabad','addressCountry'=>'PK'),
   'contactPoint'=>array('@type'=>'ContactPoint','telephone'=>'+923111222679','contactType'=>'customer service')),
  array('@type'=>'WebSite','@id'=>$siteUrl.'#website','url'=>$siteUrl,'name'=>'House of Elaan','inLanguage'=>'en',
