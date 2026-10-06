@@ -1,0 +1,130 @@
+/* Device layouts: 360�440px phones, 768�1032px tablets, 1280px displays. */
+@media(max-width:1100px){
+ .hero-premium .header #navigation{display:none}
+ .hero-premium .header .menu-toggle{display:grid;place-items:center;order:3;width:44px;height:44px;flex-shrink:0;background:#fff2f0;color:#c93932;border:1px solid #c939321c;border-radius:12px}
+ .hero-premium .header-contact{margin-left:auto}
+ .hero-v2{grid-template-columns:minmax(0,1fr);gap:38px;padding-block:44px}
+ .hero-v2-copy{max-width:740px}
+ .hero-v2 h1{font-size:clamp(48px,7.4vw,72px)}
+ .hero-v2-copy>p{max-width:680px}
+ .hero-v2-visual{width:100%;max-width:640px;margin-inline:auto}
+ .faq-layout,.finale-layout{grid-template-columns:minmax(0,1fr);gap:36px}
+ .faq-intro{max-width:680px}
+ .finale-panel{max-width:700px}
+ .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
+ .footer-identity{grid-column:1;grid-row:1}
+ .footer-connect{grid-column:2;grid-row:1}
+ .business-gallery .business-card-grid.carousel-moving{scroll-snap-type:none;scroll-behavior:auto}
+ .business-gallery-nav .business-carousel-pause{display:grid;font-size:15px}
+ .business-gallery-nav button{min-width:44px;min-height:44px}
+ .network-map{max-width:600px;width:100%}
+}
+@media(min-width:651px) and (max-width:1100px){
+ .hero-premium .container,.about-elaan>.container,.elaan-values>.container,.faq-refresh>.container,.contact-finale>.container,.elaan-footer>.container,.elaan-network>.container{width:calc(100% - 64px)}
+ .about-intro{grid-template-columns:minmax(0,1fr);gap:30px}
+ .about-description{max-width:760px}
+ .values-collection{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .values-collection .elaan-value:last-child{grid-column:1 / -1;justify-self:center;width:calc((100% - 18px) / 2)}
+ .business-gallery .business-card-grid .business-gallery-intro{flex-basis:520px;max-width:calc(100vw - 64px)}
+ .hero-building{height:440px}
+ .footer-phone{font-size:25px}
+}
+@media(max-width:650px){
+ .hero-premium .container,.about-elaan>.container,.elaan-values>.container,.faq-refresh>.container,.contact-finale>.container,.elaan-footer>.container,.elaan-network>.container{width:calc(100% - 36px)}
+ .hero-premium .header{gap:12px}
+ .hero-premium .header .header-contact{display:none}
+ .hero-premium .header .menu-toggle{margin-left:auto}
+ .hero-v2{padding-block:32px;gap:30px}
+ .hero-v2 h1{font-size:clamp(38px,10.5vw,47px);letter-spacing:-1.5px;line-height:1.08}
+ .hero-title-line{white-space:nowrap}
+ .hero-v2-copy>p{font-size:17px;line-height:1.7}
+ .hero-kicker{font-size:10px;letter-spacing:.5px;gap:10px}
+ .hero-principles{gap:9px 12px;font-size:12px}
+ .hero-building{height:clamp(300px,86vw,380px)}
+ .hero-solution{top:48px;padding:16px;column-gap:12px}
+ .hero-solution>strong{font-size:36px}
+ .hero-solution>span{font-size:13px}
+ .hero-image-caption{left:20px;right:60px;bottom:28px}
+ .hero-image-caption strong{font-size:27px}
+ .hero-image-caption>span{font-size:11px}
+ .hero-image-arrow{right:14px;bottom:28px;width:38px;height:38px}
+ .about-intro,.about-purpose-grid,.about-support{grid-template-columns:minmax(0,1fr)}
+ .about-support{gap:24px}
+ .business-gallery .business-card-grid{padding-inline:18px;scroll-padding-inline:18px}
+ .business-gallery .business-card-grid .enterprise-card,.business-gallery .business-card-grid .business-gallery-intro{flex-basis:calc(100vw - 52px);max-width:calc(100vw - 52px)}
+ .business-gallery .business-gallery-intro h2{font-size:clamp(30px,8.5vw,36px)}
+ .business-gallery .enterprise-title h3{font-size:28px;overflow-wrap:anywhere}
+ .business-gallery-progress{padding:10px 18px 0;gap:10px}
+ .business-gallery-count{font-size:10px;letter-spacing:.3px}
+ .business-gallery-nav{gap:5px}
+ .network-copy .button{font-size:15px;padding:15px 18px;gap:14px;max-width:100%}
+ .network-copy h2{font-size:clamp(34px,8.8vw,40px)}
+ .faq-refresh .faq-list details{padding-inline:16px}
+ .faq-refresh .faq-list summary{font-size:18px;grid-template-columns:minmax(0,1fr) 30px;gap:12px}.faq-refresh .faq-list summary:before{display:none}
+ .faq-refresh .faq-list details p{padding-left:0;font-size:16px}
+ .finale-panel{padding:24px 18px}
+ .finale-phone{padding:15px 12px;gap:8px}
+ .finale-phone strong{font-size:clamp(21px,5.6vw,26px);white-space:nowrap;overflow-wrap:normal}
+ .finale-phone>b{width:32px;height:32px;flex-shrink:0}
+ .finale-linkedin{font-size:16px}
+ .footer-columns{gap:28px 18px}
+ .footer-identity,.footer-connect{grid-column:1 / -1;grid-row:auto}
+ .footer-statement{text-align:left;justify-content:flex-start}
+ .footer-statement>p{font-size:30px}
+ .nav-drawer{height:100dvh;padding:22px 20px max(24px,env(safe-area-inset-bottom));width:min(360px,92vw)}
+ .drawer-heading{padding-bottom:20px}
+ .drawer-links a{font-size:21px;min-height:54px}
+ .inquiry-dialog,.business-detail-dialog{max-height:calc(100dvh - 32px);overflow-y:auto}
+}
+@media(max-width:380px){
+ .hero-v2 h1{font-size:38px}
+ .hero-v2-actions .button{padding:14px 18px;gap:14px}
+ .network-copy .button{font-size:14px;gap:10px}
+ .business-gallery .enterprise-content{padding-inline:16px}
+}
+@media(min-width:1101px) and (max-width:1350px){
+ .hero-v2{gap:40px;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)}
+ .hero-v2 h1{font-size:clamp(54px,4.8vw,64px)}
+ .network-layout{gap:36px}
+ .network-copy h2{font-size:44px}
+ .footer-columns{gap:24px;grid-template-columns:1.2fr .8fr .9fr 1.2fr}
+}
+@media(prefers-reduced-motion:reduce){.business-gallery-nav .business-carousel-pause{display:none}}
+
+/* Tablet users keep visible contact actions even with a mouse attached. */
+@media(max-width:1100px){
+ .business-gallery .enterprise-content>.enterprise-contact:not(:focus-visible){position:relative;inset:auto;width:auto;height:auto;min-height:44px;padding:12px 18px;overflow:visible;clip-path:none;white-space:normal;margin-top:18px;border:1px solid #ffffff70;box-shadow:none}
+ .business-gallery .business-card-grid{scrollbar-width:none}
+ .business-gallery .business-card-grid::-webkit-scrollbar{display:none}
+}
+
+/* Explicit FAQ cells prevent hidden counters from taking the question column. */
+.faq-refresh .faq-list summary .faq-question{display:block;min-width:0;width:auto;grid-column:2;grid-row:1;font:inherit;line-height:1.45;white-space:normal;overflow-wrap:normal;word-break:normal}
+.faq-refresh .faq-list summary>span{grid-column:3;grid-row:1;justify-self:end;display:grid;place-items:center}
+.faq-layout>*,.finale-layout>*,.footer-columns>*,.about-purpose-grid>*,.values-collection>*{min-width:0}
+.faq-refresh .faq-list{min-width:0;max-width:100%}
+.faq-refresh .faq-list details{min-width:0;width:100%}
+@media(max-width:650px){
+ .faq-refresh .faq-list summary .faq-question{grid-column:1}
+ .faq-refresh .faq-list summary>span{grid-column:2;width:30px;height:30px}
+ .faq-refresh .faq-list summary,.faq-refresh .faq-list details[open] summary{padding-block:19px;min-height:68px}
+ .faq-refresh .faq-list details p{padding:0 0 20px;font-size:16px;line-height:1.7}
+ .faq-intro>p{max-width:none}
+ .finale-copy h2{font-size:clamp(32px,8.7vw,39px);line-height:1.15}
+ .finale-copy>p{font-size:18px}
+ .footer-navigation>a{font-size:17px;overflow-wrap:break-word}
+ .hero-title-choreographed .hero-title-line{max-width:100%}
+}
+@media(min-width:651px) and (max-width:899px){
+ .faq-intro,.finale-copy,.finale-panel{width:100%;max-width:none}
+ .faq-intro>p{max-width:600px}
+}
+@media(min-width:900px) and (max-width:1100px){
+ .faq-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:28px;align-items:start}
+ .faq-intro h2{font-size:38px}
+ .faq-intro>p{font-size:18px;max-width:none}
+ .faq-help{padding:24px 20px}
+ .faq-refresh .faq-list details{padding-inline:18px}
+ .faq-refresh .faq-list summary{font-size:18px;grid-template-columns:22px minmax(0,1fr) 30px;gap:10px}
+ .faq-refresh .faq-list details p{font-size:17px;padding-left:0}
+}

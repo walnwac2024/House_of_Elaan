@@ -27,7 +27,7 @@
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#navigation');
   const drawer = document.querySelector('.nav-drawer');
-  const mobileMenu = window.matchMedia('(max-width: 1000px)');
+  const mobileMenu = window.matchMedia('(max-width: 1100px)');
   const drawerLinks = drawer.querySelector('.drawer-links');
   nav.querySelectorAll('a').forEach(link => drawerLinks.appendChild(link.cloneNode(true)));
   toggle.setAttribute('aria-controls', 'mobile-navigation');

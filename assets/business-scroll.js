@@ -9,7 +9,7 @@
     details.querySelector('summary > span').firstChild.textContent = 'Details & services ';
     details.querySelector('summary').after(intro);
   });
-  const desktop = matchMedia('(min-width: 1001px) and (min-height: 620px) and (hover: hover) and (pointer: fine)');
+  const desktop = matchMedia('(min-width: 1101px) and (min-height: 620px) and (hover: hover) and (pointer: fine)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   section.classList.add('business-gallery');
@@ -42,7 +42,7 @@
   progress.append(galleryNav);
   const stops = [galleryIntro, ...cards];
   const navButtons = [...galleryNav.querySelectorAll('button')];
-  const mobileCarousel = matchMedia('(max-width: 1000px)');
+  const mobileCarousel = matchMedia('(max-width: 1100px)');
   let carouselFrame = 0, carouselVisible = false, carouselPaused = false, resumeAfter = 0;
   const pauseButton = document.createElement('button');
   pauseButton.type = 'button';
