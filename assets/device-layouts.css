@@ -128,3 +128,10 @@
  .faq-refresh .faq-list summary{font-size:18px;grid-template-columns:22px minmax(0,1fr) 30px;gap:10px}
  .faq-refresh .faq-list details p{font-size:17px;padding-left:0}
 }
+/* One shared corner radius for interactive controls and content surfaces. */
+:root{--component-radius:12px}
+:is(#main,.sticky-site-header,.elaan-footer) :is(.button,.header-contact,.menu-toggle,.hero-building,.hero-solution,.overview-pill strong,.about-purpose,.about-support,.elaan-value,.enterprise-card,.business-gallery-intro,.enterprise-service-tags>span,.enterprise-contact,.network-node,.network-company-logo,.faq-help,.faq-list details,.finale-panel,.finale-phone,.footer-social-links>a){border-radius:var(--component-radius)}
+:is(.nav-drawer,.inquiry-dialog,.business-detail-dialog) :is(.drawer-contact,input,textarea,select,.inquiry-submit){border-radius:var(--component-radius)}
+.inquiry-dialog,.business-detail-dialog,.business-talk-cursor{border-radius:var(--component-radius)}
+.values-collection .value-hex .value-symbol{border-radius:var(--component-radius)}
+.nav-drawer .drawer-close,.inquiry-close,.business-detail-close,.business-gallery-nav button,.floating-back-top,.hero-image-arrow{border-radius:var(--component-radius)}
