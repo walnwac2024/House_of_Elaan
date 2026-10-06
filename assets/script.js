@@ -199,18 +199,18 @@
   }
   const inquiryDialog = document.querySelector('.inquiry-dialog');
   if (inquiryDialog && typeof inquiryDialog.showModal === 'function') {
-    const inquiryForm = inquiryDialog.querySelector('form');
+    const callButton = inquiryDialog.querySelector('.inquiry-call-button');
     let inquiryTrigger;
     document.querySelectorAll('.enterprise-contact').forEach(link => {
       link.setAttribute('aria-haspopup', 'dialog');
       link.addEventListener('click', event => {
         event.preventDefault();
         inquiryTrigger = link;
-        inquiryDialog.querySelector('.inquiry-status').textContent = '';
-        inquiryForm.elements.business.value = link.closest('.enterprise-card').querySelector('h3').textContent;
+
+        inquiryDialog.querySelector('.inquiry-business').textContent = link.closest('.enterprise-card').querySelector('h3').textContent;
         inquiryDialog.showModal();
         document.documentElement.classList.add('inquiry-open');
-        inquiryForm.elements.name.focus({ preventScroll: true });
+        callButton.focus({ preventScroll: true });
       });
     });
     inquiryDialog.querySelector('.inquiry-close').addEventListener('click', () => inquiryDialog.close());
@@ -222,12 +222,7 @@
       document.documentElement.classList.remove('inquiry-open');
       inquiryTrigger?.focus({ preventScroll: true });
     });
-    inquiryForm.addEventListener('submit', event => {
-      event.preventDefault();
-      const business = inquiryForm.elements.business.value;
-      inquiryDialog.querySelector('.inquiry-status').textContent =
-        `Demo complete for ${business}. No inquiry was sent or saved. Placeholder email: ${inquiryForm.dataset.demoEmail}.`;
-    });
+
   }
   const backToTop = document.querySelector('.floating-back-top');
   if (backToTop) {
@@ -235,6 +230,7 @@
     function updateBackToTop() {
       backTopFrame = 0;
       backToTop.classList.toggle('is-visible', window.scrollY > 400);
+      document.querySelector('.floating-whatsapp')?.classList.toggle('is-visible', window.scrollY > 400);
       const bounds = backToTop.getBoundingClientRect();
       let surface = document.elementsFromPoint(bounds.left + bounds.width / 2, bounds.top + bounds.height / 2)
         .find(element => element !== backToTop && !backToTop.contains(element));
@@ -308,4 +304,17 @@
   hero.addEventListener('pointerleave', reset);
   motion.addEventListener('change', reset);
   pointer.addEventListener('change', reset);
+})();
+
+// Open the desktop web composer directly so the draft travels with the chat URL.
+(() => {
+  const whatsappLink = document.querySelector('.floating-whatsapp');
+  if (!whatsappLink) return;
+  const phone = '923111222679';
+  const message = "Hello House of Elaan! I'd like to know more about your services. Please connect me with the right team.";
+  const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const destination = new URL(mobile ? `https://wa.me/${phone}` : 'https://web.whatsapp.com/send');
+  if (!mobile) destination.searchParams.set('phone', phone);
+  destination.searchParams.set('text', message);
+  whatsappLink.href = destination.href;
 })();

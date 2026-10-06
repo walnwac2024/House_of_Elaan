@@ -70,7 +70,7 @@ function wordmark() { echo '<span class="wordmark wordmark-original"><img src="a
  <div class="hero-principles"><span>Innovation</span><span>Collaboration</span><span>Dedication</span></div><a class="hero-scroll-invite" href="#overview-title"><span class="hero-scroll-track" aria-hidden="true"><i></i></span><span>One house. Endless possibilities.<small>Scroll to discover</small></span><b aria-hidden="true">&#8595;</b></a>
  </div>
  <div class="hero-v2-visual">
- <div class="hero-visual-label"><span>LOCAL EXPERTISE. GLOBAL BEST PRACTICES.</span><span>↗</span></div>
+ <div class="hero-visual-label"><span>LOCAL EXPERTISE. GLOBAL BEST PRACTICES.</span></div>
  <div class="hero-building"><img src="assets/architecture.jpg" width="1000" height="750" fetchpriority="high" alt="Modern architecture representing House of Elaan’s business vision"><div class="hero-image-caption"><span>OUR SHARED VISION</span><strong>Creating a better<br>future for all.</strong></div><a href="#about" class="hero-image-arrow" aria-label="Discover our vision">↗</a></div>
  <div class="hero-solution"><strong>360<span>°</span></strong><span>Solutions built<br>around your needs.</span><a href="#about" aria-label="Explore our integrated approach">↗</a></div>
  <div class="hero-visual-footer"><span>ONE GROUP. <b>NINE SPECIALIST BUSINESSES.</b></span><span>01 — 09</span></div>
@@ -152,20 +152,17 @@ function wordmark() { echo '<span class="wordmark wordmark-original"><img src="a
  </div>
  <div class="footer-legal"><span>© <?php echo date('Y'); ?> House of Elaan. All rights reserved.</span><span><i aria-hidden="true"></i> One house. Endless possibilities.</span></div>
 </div></footer>
+<a class="floating-whatsapp" href="https://wa.me/923111222679?text=Hello%20House%20of%20Elaan!%20I'd%20like%20to%20know%20more%20about%20your%20services.%20Please%20connect%20me%20with%20the%20right%20team." target="_blank" rel="noopener noreferrer" aria-label="Chat with House of Elaan on WhatsApp (opens in a new tab)" title="Chat on WhatsApp"><img src="assets/whatsapp.png" alt="" width="512" height="512"></a>
 <a class="floating-back-top" href="#home" aria-label="Back to top" title="Back to top"><span aria-hidden="true">↑</span></a>
-<dialog class="inquiry-dialog" aria-labelledby="inquiry-title">
- <button class="inquiry-close" type="button" aria-label="Close inquiry form">&times;</button>
- <span class="inquiry-eyebrow">LET’S START A CONVERSATION</span>
- <h2 id="inquiry-title">Let’s talk.</h2>
- <p class="inquiry-intro">Tell us what you have in mind. We’ll help you find the right expertise.</p>
- <form class="inquiry-form" data-demo-email="inquiries@example.com">
-  <label>Business<input name="business" readonly></label>
-  <div class="inquiry-fields"><label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Full name"></label><label>Phone or email<input name="contact" required maxlength="160" placeholder="How can we reach you?"></label></div>
-  <label>Your message<textarea name="message" rows="4" required maxlength="3000" placeholder="Tell us about your project or inquiry"></textarea></label>
-  <p class="inquiry-status" role="status"></p>
-  <button class="inquiry-submit" type="submit">Send inquiry <span aria-hidden="true">↗</span></button>
-  <p class="inquiry-call">Prefer a conversation? <a href="tel:+923111222679">Call +92 3111 222 679</a></p>
- </form>
+<dialog class="inquiry-dialog call-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-description">
+ <button class="inquiry-close" type="button" aria-label="Close call options">&times;</button>
+ <span class="inquiry-eyebrow">LET'S START A CONVERSATION</span>
+ <h2 id="inquiry-title">Let's talk.</h2>
+ <p class="inquiry-intro" id="inquiry-description">Call our team and we'll connect you with the right expertise.</p>
+ <div class="call-business"><span>YOU'RE INTERESTED IN</span><strong class="inquiry-business">House of Elaan</strong></div>
+ <a class="call-number" href="tel:+923111222679">+92 3111 222 679</a>
+ <a class="inquiry-call-button" href="tel:+923111222679"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a1 1 0 0 1 1 .9l.5 3a1 1 0 0 1-.3.9L7.8 9.3a16 16 0 0 0 6.9 6.9l1.5-1.5a1 1 0 0 1 .9-.3l3 .5a1 1 0 0 1 .9 1z"/></svg>Call now</a>
+ <p class="call-hint">Opens your phone or calling app.</p>
 </dialog>
 
 <dialog class="nav-drawer" id="mobile-navigation" aria-labelledby="drawer-title">
