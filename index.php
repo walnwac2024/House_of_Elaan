@@ -46,12 +46,14 @@ function wordmark() { echo '<span class="wordmark wordmark-original"><img src="a
  <meta property="og:type" content="website"><meta property="og:site_name" content="House of Elaan">
  <meta property="og:url" content="<?php echo e($siteUrl); ?>">
  <meta property="og:locale" content="en_PK">
- <meta property="og:image" content="<?php echo e($siteUrl); ?>assets/images/architecture.jpg">
+ <meta property="og:image" content="<?php echo e($seoImage); ?>">
+ <meta property="og:image:width" content="1000">
+ <meta property="og:image:height" content="750">
  <meta property="og:image:alt" content="Modern architecture representing House of Elaan's real estate and business services">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="<?php echo e($seoTitle); ?>">
  <meta name="twitter:description" content="<?php echo e($seoDescription); ?>">
- <meta name="twitter:image" content="<?php echo e($siteUrl); ?>assets/images/architecture.jpg">
+ <meta name="twitter:image" content="<?php echo e($seoImage); ?>">
  <link rel="stylesheet" href="assets/css/style.css?v=<?php echo filemtime(__DIR__ . '/assets/css/style.css'); ?>"><link rel="stylesheet" href="assets/css/hero.css?v=<?php echo filemtime(__DIR__ . '/assets/css/hero.css'); ?>"><link rel="stylesheet" href="assets/css/about.css?v=<?php echo filemtime(__DIR__ . '/assets/css/about.css'); ?>"><link rel="stylesheet" href="assets/css/businesses.css?v=<?php echo filemtime(__DIR__ . '/assets/css/businesses.css'); ?>"><link rel="preload" href="assets/fonts/Gilroy-SemiBold.woff" as="font" type="font/woff" crossorigin>
  <script type="application/ld+json"><?php echo json_encode($seoSchema, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?></script>
 <link rel="stylesheet" href="assets/css/responsive.css?v=<?php echo filemtime(__DIR__ . '/assets/css/responsive.css'); ?>"><link rel="stylesheet" href="assets/css/device-layouts.css?v=<?php echo filemtime(__DIR__ . '/assets/css/device-layouts.css'); ?>"></head>

@@ -1,4 +1,21 @@
-# Optional Apache modules: no forced production redirect on local WAMP.
+# Production SEO/deployment rules for https://houseofelaan.com/.
+# These redirects only run on the live domain, so local WAMP/localhost stays usable.
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+
+ RewriteCond %{HTTP_HOST} ^www\.houseofelaan\.com$ [NC]
+ RewriteRule ^ https://houseofelaan.com%{REQUEST_URI} [R=301,L]
+
+ RewriteCond %{HTTP_HOST} ^houseofelaan\.com$ [NC]
+ RewriteCond %{HTTPS} !=on
+ RewriteRule ^ https://houseofelaan.com%{REQUEST_URI} [R=301,L]
+
+ RewriteCond %{HTTP_HOST} ^houseofelaan\.com$ [NC]
+ RewriteRule ^index\.php$ https://houseofelaan.com/ [R=301,L]
+</IfModule>
+
 <IfModule mod_deflate.c>
  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml text/xml
 </IfModule>
