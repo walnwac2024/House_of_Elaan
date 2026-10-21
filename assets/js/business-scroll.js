@@ -3,12 +3,6 @@
   const rail = section?.querySelector('.business-card-grid');
   if (!rail) return;
   const cards = [...rail.querySelectorAll('.enterprise-card')];
-  cards.forEach(card => {
-    const details = card.querySelector('.enterprise-services');
-    const intro = card.querySelector('.enterprise-intro');
-    details.querySelector('summary > span').firstChild.textContent = 'Details & services ';
-    details.querySelector('summary').after(intro);
-  });
   const desktop = matchMedia('(min-width: 1101px) and (min-height: 620px) and (hover: hover) and (pointer: fine)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
@@ -206,68 +200,5 @@
   window.addEventListener('hashchange', hashCard);
   window.addEventListener('load', hashCard);
 
-  const cursor = document.createElement('span');
-  cursor.className = 'business-talk-cursor';
-  cursor.textContent = 'Let’s Talk ↗';
-  cursor.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(cursor);
-  let cursorFrame = 0, pointerX = 0, pointerY = 0;
-  function hideCursor() {
-    cancelAnimationFrame(cursorFrame);
-    cursorFrame = 0;
-    cursor.classList.remove('is-active');
-    rail.classList.remove('has-talk-cursor');
-  }
-  rail.addEventListener('pointermove', event => {
-    if (!finePointer.matches || event.pointerType === 'touch' || event.target.closest('a,button,summary,details,input,textarea') || document.querySelector('dialog[open]')) { hideCursor(); return; }
-    if (!event.target.closest('.enterprise-card')) { hideCursor(); return; }
-    pointerX = event.clientX; pointerY = event.clientY;
-    if (!cursorFrame) cursorFrame = requestAnimationFrame(() => {
-      cursor.style.left = `${pointerX}px`; cursor.style.top = `${pointerY}px`;
-      cursor.classList.add('is-active'); rail.classList.add('has-talk-cursor');
-      cursorFrame = 0;
-    });
-  });
-  rail.addEventListener('pointerleave', hideCursor);
-  window.addEventListener('scroll', hideCursor, { passive: true });
-  finePointer.addEventListener('change', hideCursor);
-  rail.addEventListener('click', event => {
-    if (!finePointer.matches || event.target.closest('a,button,summary,details,input,textarea') || window.getSelection().toString()) return;
-    const card = event.target.closest('.enterprise-card');
-    if (card) { hideCursor(); card.querySelector('.enterprise-contact').click(); }
-  });
   measure();
-  // Long descriptions open outside the pinned panel instead of a clipped scrollbox.
-  const detailDialog = document.createElement('dialog');
-  detailDialog.className = 'business-detail-dialog';
-  detailDialog.setAttribute('aria-labelledby', 'business-detail-title');
-  detailDialog.innerHTML = '<button type="button" class="business-detail-close" aria-label="Close details">×</button><h2 id="business-detail-title"></h2><div class="business-detail-body"></div>';
-  document.body.appendChild(detailDialog);
-  let detailTrigger;
-  cards.forEach(card => {
-    const button = document.createElement('button');
-    button.className = 'business-detail-trigger';
-    button.type = 'button';
-    button.textContent = 'Details & services ↗';
-    button.setAttribute('aria-haspopup', 'dialog');
-    card.querySelector('.enterprise-reading').before(button);
-    button.addEventListener('click', () => {
-      hideCursor();
-      detailTrigger = button;
-      detailDialog.querySelector('h2').textContent = card.querySelector('h3').textContent;
-      const body = detailDialog.querySelector('.business-detail-body');
-      body.replaceChildren(card.querySelector('.enterprise-intro').cloneNode(true), card.querySelector('.enterprise-services dl').cloneNode(true));
-      detailDialog.showModal();
-      document.documentElement.classList.add('inquiry-open');
-    });
-  });
-  detailDialog.querySelector('button').addEventListener('click', () => detailDialog.close());
-  detailDialog.addEventListener('click', event => {
-    const rect = detailDialog.getBoundingClientRect();
-    if (event.target === detailDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) detailDialog.close();
-  });
-  detailDialog.addEventListener('close', () => {
-    document.documentElement.classList.remove('inquiry-open');
-    detailTrigger?.focus({ preventScroll: true });
-  });
 })();

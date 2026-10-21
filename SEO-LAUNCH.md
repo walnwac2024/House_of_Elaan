@@ -30,3 +30,9 @@ After deployment:
 
 The site is currently a single page. Metadata alone cannot establish rankings for
 all nine businesses. Rankings and indexing are controlled by search engines.
+
+Search-result icon:
+- Homepage links to assets/icons/hoe-favicon.svg, a square scalable House of Elaan icon.
+- Keep this URL stable and publicly accessible; Googlebot-Image must be able to fetch it.
+- After publishing, request homepage reindexing in Google Search Console. Google controls
+  when the updated favicon appears and does not guarantee its display.

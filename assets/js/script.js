@@ -197,33 +197,6 @@
     }
     window.addEventListener('resize', scheduleCardSizing, { passive: true });
   }
-  const inquiryDialog = document.querySelector('.inquiry-dialog');
-  if (inquiryDialog && typeof inquiryDialog.showModal === 'function') {
-    const callButton = inquiryDialog.querySelector('.inquiry-call-button');
-    let inquiryTrigger;
-    document.querySelectorAll('.enterprise-contact').forEach(link => {
-      link.setAttribute('aria-haspopup', 'dialog');
-      link.addEventListener('click', event => {
-        event.preventDefault();
-        inquiryTrigger = link;
-
-        inquiryDialog.querySelector('.inquiry-business').textContent = link.closest('.enterprise-card').querySelector('h3').textContent;
-        inquiryDialog.showModal();
-        document.documentElement.classList.add('inquiry-open');
-        callButton.focus({ preventScroll: true });
-      });
-    });
-    inquiryDialog.querySelector('.inquiry-close').addEventListener('click', () => inquiryDialog.close());
-    inquiryDialog.addEventListener('click', event => {
-      const box = inquiryDialog.getBoundingClientRect();
-      if (event.target === inquiryDialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) inquiryDialog.close();
-    });
-    inquiryDialog.addEventListener('close', () => {
-      document.documentElement.classList.remove('inquiry-open');
-      inquiryTrigger?.focus({ preventScroll: true });
-    });
-
-  }
   const backToTop = document.querySelector('.floating-back-top');
   if (backToTop) {
     let backTopFrame = 0;

@@ -1,0 +1,55 @@
+/* Loaded last on every page so the supplied footer icons render identically. */
+.elaan-footer .footer-social-links{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+ gap:10px;
+ margin-top:22px;
+}
+.elaan-footer .footer-social-links>a[title]{
+ display:block;
+ flex:0 0 36px;
+ width:36px;
+ min-width:36px;
+ height:36px;
+ min-height:36px;
+ margin:0;
+ padding:0;
+ overflow:hidden;
+ border:0;
+ border-radius:10px;
+ background:transparent;
+ box-shadow:none;
+ line-height:0;
+}
+.elaan-footer .footer-social-links>a[title]>img{
+ display:block;
+ width:36px;
+ height:36px;
+ max-width:none;
+ margin:0;
+ padding:0;
+ border:0;
+ border-radius:10px;
+ object-fit:contain;
+}
+@media(hover:hover){
+ .elaan-footer .footer-social-links>a[title]:hover{
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  filter:brightness(1.08);
+  transform:translateY(-2px);
+ }
+}
+
+/* Reuse the supplied LinkedIn artwork in the homepage contact panel. */
+.finale-linkedin-icon-image{
+ display:block;
+ flex:0 0 32px;
+ width:32px;
+ height:32px;
+ max-width:none;
+ border-radius:7px;
+ object-fit:contain;
+}

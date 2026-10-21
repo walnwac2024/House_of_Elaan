@@ -192,3 +192,16 @@
  .floating-whatsapp.is-visible>img{animation:back-top-soft-hop 3.4s ease-in-out infinite}
  .floating-whatsapp:hover>img,.floating-whatsapp:focus-visible>img{animation-play-state:paused}
 }
+
+/* Company cards now have two independent links. The details page opens from Visit Now; Let's Talk uses tel:. */
+.business-card-grid .enterprise-card{min-height:580px}
+.business-gallery .enterprise-content{display:flex;flex-direction:column}
+.business-gallery .enterprise-actions,.enterprise-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:20px}
+.business-gallery .enterprise-content .enterprise-actions>a,.enterprise-actions>a{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:48px;padding:12px 18px;border-radius:10px;font:600 15px/1.25 Gilroy,Arial,sans-serif;text-decoration:none;white-space:nowrap}
+.business-gallery .enterprise-content .enterprise-actions .enterprise-visit,.enterprise-actions .enterprise-visit{background:#fff;color:#b72f29;border:1px solid #ffffff70}
+.business-gallery .enterprise-content .enterprise-actions .enterprise-contact,.enterprise-actions .enterprise-contact{position:static;width:auto;height:auto;min-height:48px;overflow:visible;clip-path:none;margin:0;background:#c93932;color:#fff;border:1px solid #c93932;box-shadow:none}
+.business-gallery .enterprise-content .enterprise-actions .enterprise-visit:hover{background:#f9eeee}
+.business-gallery .enterprise-content .enterprise-actions .enterprise-contact:hover{background:#ae2d28}
+.enterprise-actions>a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:650px){.business-gallery .enterprise-actions,.enterprise-actions{gap:9px}.business-gallery .enterprise-content .enterprise-actions>a,.enterprise-actions>a{flex:1 1 130px;min-width:0;font-size:14px;padding-inline:12px}}
+@media(prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}
